@@ -263,16 +263,87 @@ const students = [
 </article> */
 
 
-// Put an article DOM element in your index.html with the id attribute value of messages.
+
+
+
+// // Put an article DOM element in your index.html with the id attribute value of messages.
+// const messageArticle = document.createElement('article');
+// messageArticle.id = 'message';
+// document.body.appendChild(messageArticle);
+
+
+
+// // In your JavaScript, use querySelector() to obtain a reference to that article DOM element.
+// const messageSection = document.querySelector('#message')
+
+
+// // Create five (5) section components, each with a class of message, and with the content of your choosing.
+// // Using appendChild(), attach each message as a child to the messages element.
+// const section0 = document.createElement('section');
+// section0.className = "message";
+// section0.textContent = "My dog's name is Sissy.";
+// messageSection.appendChild(section0);
+
+// const section1 = document.createElement('section');
+// section1.className = "message";
+// section1.textContent = "She is a Jack Russel Terrier.";
+// messageSection.appendChild(section1);
+
+// const section2 = document.createElement('section');
+// section2.className = "message";
+// section2.textContent = "She loves meeting new people.";
+// messageSection.appendChild(section2);
+
+// const section3 = document.createElement('section');
+// section3.className = "message";
+// section3.textContent = "She also loves hiking.";
+// messageSection.appendChild(section3);
+
+// const section4 = document.createElement('section');
+// section4.className = "message";
+// section4.textContent = "I have to keep a close eye on her when we go hiking because she's a murder machine that wants to kill every animal she sees.";
+// messageSection.appendChild(section4);
+
+
 
 const messageArticle = document.createElement('article');
-messageArticle.id = 'messages';
-// console.log(messageArticle);
-// In your JavaScript, use querySelector() to obtain a reference to that article DOM element.
+messageArticle.id = 'message';
+document.body.appendChild(messageArticle);
 
-// Create five (5) section components, each with a class of message, and with the content of your choosing.
-const articleSection = document.createElement('section');
-articleSection.text =  "My dog is named Sissy";
-messageArticle.appendChild(articleSection);
+const fragment = document.createDocumentFragment()
 
-console.log(messageArticle)
+const section0 = document.createElement('section');
+section0.className = "message";
+section0.textContent = "My dog's name is Sissy.";
+fragment.appendChild(section0);
+
+const section1 = document.createElement('section');
+section1.className = "message";
+section1.textContent = "She is a Jack Russel Terrier.";
+fragment.appendChild(section1);
+
+const section2 = document.createElement('section');
+section2.className = "message";
+section2.textContent = "She loves meeting new people.";
+fragment.appendChild(section2);
+
+const section3 = document.createElement('section');
+section3.className = "message";
+section3.textContent = "She also loves hiking.";
+fragment.appendChild(section3);
+
+const section4 = document.createElement('section');
+section4.className = "message";
+section4.textContent = "I have to keep a close eye on her when we go hiking because she's a murder machine that wants to kill every animal she sees.";
+fragment.appendChild(section4);
+
+document.querySelector("#message").appendChild(fragment);
+
+
+
+
+
+
+
+
+
